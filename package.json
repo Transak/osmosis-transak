@@ -2,11 +2,8 @@
   "name": "@transak/osmosis-transak",
   "version": "1.0.2",
   "description": "",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "files": [
-    "lib/*/**"
-  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "directories": {
     "test": "test"
   },
@@ -43,5 +40,8 @@
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.5.2"
-  }
+  },
+  "files": [
+    "/lib/**/*"
+  ]
 }
