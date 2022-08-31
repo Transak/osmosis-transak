@@ -2,8 +2,8 @@
   "name": "@transak/osmosis-transak",
   "version": "1.0.1",
   "description": "",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
     "lib/*/**"
   ],
