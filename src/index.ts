@@ -100,7 +100,7 @@ async function getTransaction(
     : 0;
 
   return {
-    txData: indexedTx,
+    transactionData: indexedTx,
     receipt: {
       amount: Number(_toDecimal(msgSend.amount[0].amount, decimals)) ?? 0,
       date: new Date(
@@ -165,7 +165,7 @@ async function sendTransaction({
   );
 
   return {
-    txResponse: broadcastTxResponse,
+    transactionData: broadcastTxResponse,
     receipt: {
       amount,
       date: new Date(

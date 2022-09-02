@@ -13,7 +13,7 @@ export type Network = {
 };
 
 export type GetTransactionResult = {
-  txData: IndexedTx;
+  transactionData: IndexedTx;
   receipt: {
     amount: number;
     date: Date;
@@ -45,7 +45,7 @@ export type SendTransactionParams = {
 };
 
 export type SendTransactionResult = {
-  txResponse: BroadcastTxResponse;
+  transactionData: BroadcastTxResponse;
   receipt: {
     amount: number;
     date: Date;
