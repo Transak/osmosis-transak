@@ -40,7 +40,7 @@ const getNetwork = (network: string) =>
   (network === 'main' ? networks[network] : networks.testnet) as Network;
 
 const isValidWalletAddress = (address: string) =>
-  validWallet.test(address) as boolean;
+  new RegExp(validWallet).test(address) as boolean;
 
 const getTransactionLink = (txId: string, network: string) =>
   getNetwork(network).transactionLink(txId) as string;
