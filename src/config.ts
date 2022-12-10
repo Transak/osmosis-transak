@@ -9,7 +9,7 @@ export const networks: Record<string, Network> = {
     chainId: 'osmosis-1',
     bech32Prefix: 'osmo',
     nativeDenom: 'uosmo',
-    defaultTxFee: 500,
+    defaultTxFee: 2000,
     defaultGas: 250000,
   },
   testnet: {
@@ -20,7 +20,7 @@ export const networks: Record<string, Network> = {
     chainId: 'osmo-test-4',
     bech32Prefix: 'osmo',
     nativeDenom: 'uosmo',
-    defaultTxFee: 500,
+    defaultTxFee: 2000,
     defaultGas: 250000,
   },
 };
