@@ -2,7 +2,7 @@ import { Network } from './types';
 
 export const networks: Record<string, Network> = {
   main: {
-    provider: `https://osmosis-mainnet-rpc.allthatnode.com:26657/HCsCEAIRk8lnZ7CgFEaLrie8YqtbNX3b`,
+    provider: `https://osmosis-mainnet-rpc.allthatnode.com:26657/${process.env.ALLTHATNODEAPIKEY}`,
     transactionLink: hash => `https://www.mintscan.io/osmosis/txs/${hash}`,
     walletLink: address => `https://www.mintscan.io/osmosis/account/${address}`,
     networkName: 'osmosis',
@@ -13,7 +13,7 @@ export const networks: Record<string, Network> = {
     defaultGas: 250000,
   },
   testnet: {
-    provider: `https://osmosis-testnet-rpc.allthatnode.com:26657/HCsCEAIRk8lnZ7CgFEaLrie8YqtbNX3b`,
+    provider: `https://osmosis-testnet-rpc.allthatnode.com:26657/${process.env.ALLTHATNODEAPIKEY}`,
     transactionLink: hash => `https://www.mintscan.io/osmosis/txs/${hash}`,
     walletLink: address => `https://www.mintscan.io/osmosis/account/${address}`,
     networkName: 'osmosis',
