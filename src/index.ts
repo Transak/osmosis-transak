@@ -96,7 +96,7 @@ async function getTransaction(
     ? rawTx.authInfo.fee.amount[0].amount
     : '';
   const gasCostInCrypto = feeInDenom
-    ? Number(_toCrypto(feeInDenom, decimals))
+    ? Number(_toDecimal(feeInDenom, decimals))
     : 0;
 
   return {
@@ -110,7 +110,7 @@ async function getTransaction(
       gasCostCryptoCurrency: 'OSMO',
       gasCostInCrypto,
       gasLimit: indexedTx.gasWanted,
-      gasPrice: gasCostInCrypto / indexedTx.gasWanted,
+      gasPrice: (Number(feeInDenom) / indexedTx.gasWanted) as number,
       isPending: false,
       isExecuted: true,
       isSuccessful: indexedTx.code === 0,
